@@ -159,6 +159,8 @@ canvas.addEventListener('click', () => {
 
 });
 
+
+// delai pour enlever le win ou loose
 endScreen.addEventListener('click', () => {
 
     setTimeout(() => {
