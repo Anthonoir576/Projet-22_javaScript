@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Allerta Stencil', sans-serif;
+    font-family: 'DotGothic16', sans-serif;
     user-select: none;
 
 }
@@ -14,11 +14,12 @@ body {
 
     text-align: center;
     min-height: 100vh;
-    background: url(https://i.ibb.co/CHXz86T/hospital.jpg) no-repeat 0% 0%/cover;
+    width: 100vw;
+    background: url(../image/z.jpg) no-repeat 0% 0%/cover;
 
     
-    overflow-x: hidden;
-    font-family: 'Josefin Sans', 'Lato', sans-serif;
+    overflow: hidden;
+    
 
     #endScreen {
 
