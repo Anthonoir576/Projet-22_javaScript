@@ -8,7 +8,7 @@ const hand = document.querySelector('.blood');
 
 // le score a atteindre, et le nombre delement qui sont afficher pour perdre la partie
 zombieLeft = 60;
-gameOverNumber = 20;
+gameOverNumber = 40;
 loopPlay = false;
 
 
@@ -42,15 +42,18 @@ function start() {
 
         setTimeout(() => {
 
+            // le jeu est gagner lorsque le nombre de zombie restant est a zero
             if (zombieRestant === 0) {
 
                 youWin();
-
+            
+            // le jeu continue, tant que le nombre de zombie pop et inférieur a une valeur defini en haut    
             } else if (canvas.childElementCount < gameOverNumber) {
              
                 zombiePop();
                 game();
 
+            // le jeu est perdu, si aucune de ces conditions est remplissent.    
             } else {
 
                 gameOver();
@@ -58,9 +61,17 @@ function start() {
             }
 
         }, randomTime);
-
     };
 
+    // fonction utiliser lorsque l'utilisateur perds la partie
+    const gameOver = () => {
+
+        endScreen.innerHTML = `<div class="gameOver"> GAME OVER <br /> Votre score : ${count}</div>`;
+        endScreen.style.visibility = 'visible';
+        endScreen.style.opacity = '1';
+        loopPlay = false;
+
+    };
 
 
 };
