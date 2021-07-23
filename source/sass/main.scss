@@ -73,10 +73,13 @@ body {
 
     #start {
 
-        margin: 2rem 2rem 0;
+        margin: 3rem 0 0 0;
         padding: 1rem 2rem;
+
+        width: 50%;
         background: rgba(252, 49, 49, 0.699);
         border-radius: 5px;
+        font-size: 20px;
         color: #eee;
         border: 1px rgba(128, 128, 128, 0.404) solid;
         box-shadow: 1px 1px 1px #333;
@@ -84,7 +87,7 @@ body {
         cursor: pointer;
         text-transform: uppercase;
         outline: none;
-        animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+        //animation: shadow-pop-br 0.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
     
         &:active {
 
@@ -133,11 +136,26 @@ body {
 
         color: #eee;
         margin-bottom: 3rem;
+
+        & h1 {
+
+            font-size: 50px;
+            letter-spacing: 30px;
+
+            &::first-letter {
+
+                color: #ff0000;
+
+                font-size: 80px;
+
+            }
+
+        }
   
         .kills {
 
             font-size: 2rem;
-            margin: 1rem 0;
+            margin: 0 0 1rem 0;
     
             #score {
 
