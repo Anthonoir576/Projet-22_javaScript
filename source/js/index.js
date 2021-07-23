@@ -8,7 +8,7 @@ const hand = document.querySelector('.blood');
 
 // le score a atteindre, et le nombre delement qui sont afficher pour perdre la partie
 zombieLeft = 60;
-gameOverNumber = 40;
+gameOverNumber = 1;
 loopPlay = false;
 
 
@@ -73,6 +73,19 @@ function start() {
 
     };
 
+    // fonction utiliser lorsque l'utilisateur gagne la partie
+    const youWin = () => {
+
+        // calcule la précision, rapport click / img supprimé 
+        let precision = Math.round(count / zombieLeft * 100);
+
+        endScreen.innerHTML = `<div class="youWin"> Vous avez GAGNÉ ! <br />  Votre précision :<span> ${precision} </span>%</div>`;
+        endScreen.style.visibility = 'visible';
+        endScreen.style.opacity = '1';
+        loopPlay = false;
+
+    };
+
 
 };
 
@@ -127,9 +140,22 @@ document.addEventListener('click', function (e) {
         targetElement.remove();
 
         count++;
+        
         score.innerHTML = count;
 
-    };   
-
+    };
 
 });
+
+// decompte zombie restant
+canvas.addEventListener('click', () => {
+
+    if (zombieRestant > 0) {
+
+        zombieRestant--;
+        zombies.innerHTML = zombieRestant;
+
+    };
+
+});
+

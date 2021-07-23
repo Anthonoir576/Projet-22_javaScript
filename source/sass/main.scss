@@ -41,21 +41,20 @@ body {
             
             line-height: 9rem;
             font-size: 5rem;
-            background: rgba(0, 0, 0, 0.9);
-            border-top: 5px solid #ff0000;
-            border-bottom: 5px solid #ff0000;
-            color : rgb(197, 197, 197);
+            background: #ff0000c2;
+            color : rgb(255, 254, 254);
             box-shadow: 0 10px 15px black;
+            text-shadow: 4px 2px 1px rgba(0, 0, 0, 0.808)
             
         }
 
         .youWin {
             
             margin: 7rem auto 0;
-            width: 70%;
+            width: 100%;
             line-height: 9rem;
-            color: rgb(60, 0, 255);
-            background: rgba(255, 166, 0, 0.651);
+            color: rgb(255, 255, 255);
+            background: #008000c7;
             box-shadow: 0 10px 15px black;
             font-size: 4rem;
             padding: 1rem;
@@ -63,9 +62,9 @@ body {
     
             span {
 
-            color: rgb(233, 0, 0);
-            font-weight: bold;
-            text-shadow: 3px 1px 1px rgba(0, 0, 0, 0.808);
+                color: rgb(233, 0, 0);
+                font-weight: bold;
+                text-shadow: 3px 1px 1px rgba(0, 0, 0, 0.808);
 
             }
         }

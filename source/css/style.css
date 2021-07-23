@@ -31,18 +31,17 @@ body #endScreen .gameOver {
   width: 100%;
   line-height: 9rem;
   font-size: 5rem;
-  background: rgba(0, 0, 0, 0.9);
-  border-top: 5px solid #ff0000;
-  border-bottom: 5px solid #ff0000;
-  color: #c5c5c5;
+  background: #ff0000c2;
+  color: #fffefe;
   box-shadow: 0 10px 15px black;
+  text-shadow: 4px 2px 1px rgba(0, 0, 0, 0.808);
 }
 body #endScreen .youWin {
   margin: 7rem auto 0;
-  width: 70%;
+  width: 100%;
   line-height: 9rem;
-  color: #3c00ff;
-  background: rgba(255, 166, 0, 0.651);
+  color: white;
+  background: #008000c7;
   box-shadow: 0 10px 15px black;
   font-size: 4rem;
   padding: 1rem;
