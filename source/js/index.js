@@ -2,17 +2,28 @@
 
 const canvas = document.getElementById('canvas');
 const score = document.getElementById('score');
-const days = document.getElementById('days');
+const zombies = document.getElementById('zombies');
 const endScreen = document.getElementById('endScreen');
 
+// le score a atteindre, et le nombre delement qui sont afficher pour perdre la partie
+zombieLeft = 60;
+gameOverNumber = 20;
 
+// FONCTION DE DEPART et ou RESTART
 function start() {
 
     let count = 0;
+    // vitesse de pop
+    getFaster = 6000;
+    zombieRestant = zombieLeft;
 
-
+    canvas.innerHTML = '';
     score.innerHTML = count;
+    zombies.innerHTML = zombieRestant;
+
 };
+
+// GENERAL SETTING  / LOGIC GAME ##########################################################
 
 
 // FONCTION QUI CREE UN ZOMBIE de taille aleatoire, et le moove aléatoirement sur 14s via CSS
