@@ -42,8 +42,20 @@ function start() {
 
         setTimeout(() => {
 
-            zombiePop();
-            game();
+            if (zombieRestant === 0) {
+
+                youWin();
+
+            } else if (canvas.childElementCount < gameOverNumber) {
+             
+                zombiePop();
+                game();
+
+            } else {
+
+                gameOver();
+
+            }
 
         }, randomTime);
 
