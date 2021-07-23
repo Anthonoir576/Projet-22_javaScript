@@ -9,6 +9,8 @@ const endScreen = document.getElementById('endScreen');
 zombieLeft = 60;
 gameOverNumber = 20;
 
+
+
 // FONCTION DE DEPART et ou RESTART
 function start() {
 
@@ -21,9 +23,30 @@ function start() {
     score.innerHTML = count;
     zombies.innerHTML = zombieRestant;
 
+    game();
+
+
+
+    // GENERAL SETTING  / LOGIC GAME 
+    function game() {
+
+        let randomTime = Math.round(Math.random() * getFaster);
+
+        setTimeout(() => {
+
+            zombiePop();
+            
+        }, randomTime);
+
+    };
+
+
+
 };
 
-// GENERAL SETTING  / LOGIC GAME ##########################################################
+
+
+
 
 
 // FONCTION QUI CREE UN ZOMBIE de taille aleatoire, et le moove aléatoirement sur 14s via CSS
@@ -60,6 +83,8 @@ function zombiePop() {
 
 };
 
+
+
 // kill lelement, et met +1 au compteur, puis l'affiche
 document.addEventListener('click', function (e) {
 
@@ -68,8 +93,9 @@ document.addEventListener('click', function (e) {
     if (targetElement.classList.contains('virus')) {
 
         targetElement.remove();
-        compteur++;
-        score.innerHTML = compteur;
+        
+        count++;
+        score.innerHTML = count;
 
     };   
 

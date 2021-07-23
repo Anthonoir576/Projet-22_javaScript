@@ -96,7 +96,7 @@ body .scoreboard .kills #score {
 body .scoreboard .confinement {
   font-size: 1.6rem;
 }
-body .scoreboard .confinement #days {
+body .scoreboard .confinement #zombies {
   color: #ff0000e1;
 }
 body #canvas {
