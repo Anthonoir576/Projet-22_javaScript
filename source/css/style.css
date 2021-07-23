@@ -10,7 +10,7 @@ body {
   text-align: center;
   min-height: 100vh;
   width: 100vw;
-  background: url(../image/z.jpg) no-repeat 0% 0%/cover;
+  background: url(../image/z.jpg) no-repeat center/cover;
   overflow: hidden;
 }
 body #endScreen {
@@ -134,6 +134,37 @@ body #canvas .virus:active {
   to {
     transform: translate(var(--trX), var(--trY)) scale(var(--scaler));
   }
+}
+
+.blood {
+  background-image: url(../image/hand.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+  color: black !important;
+}
+.blood h1 {
+  color: black !important;
+  text-shadow: 0 1px 20px white;
+  background: rgba(51, 51, 51, 0.089);
+}
+.blood .kills {
+  color: black !important;
+  font-weight: 900;
+  text-shadow: 0 1px 20px white;
+  background: rgba(51, 51, 51, 0.089);
+}
+.blood .confinement {
+  color: black !important;
+  font-weight: 900;
+  text-shadow: 0 1px 20px white;
+  background: rgba(51, 51, 51, 0.089);
+}
+.blood #canvas {
+  background: linear-gradient(135deg, #ff000025 0%, #ff000056 100%);
+  border: none;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

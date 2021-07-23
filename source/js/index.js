@@ -4,17 +4,20 @@ const canvas = document.getElementById('canvas');
 const score = document.getElementById('score');
 const zombies = document.getElementById('zombies');
 const endScreen = document.getElementById('endScreen');
+const hand = document.querySelector('.blood');
 
 // le score a atteindre, et le nombre delement qui sont afficher pour perdre la partie
 zombieLeft = 60;
 gameOverNumber = 20;
+loopPlay = false;
 
 
 
 // FONCTION DE DEPART et ou RESTART
 function start() {
 
-    let count = 0;
+    count = 0;
+
     // vitesse de pop
     getFaster = 6000;
     zombieRestant = zombieLeft;
@@ -23,19 +26,25 @@ function start() {
     score.innerHTML = count;
     zombies.innerHTML = zombieRestant;
 
-    game();
+    loopPlay ? '' : game();
+    loopPlay = true;
 
+    // Supprime l'intro au start
+    hand.classList.remove('blood');
 
 
     // GENERAL SETTING  / LOGIC GAME 
     function game() {
 
         let randomTime = Math.round(Math.random() * getFaster);
+        // Permet de faire pop de plus en plus vite
+        getFaster > 700 ? getFaster = (getFaster * 0.9) : '';
 
         setTimeout(() => {
 
             zombiePop();
-            
+            game();
+
         }, randomTime);
 
     };
@@ -93,7 +102,7 @@ document.addEventListener('click', function (e) {
     if (targetElement.classList.contains('virus')) {
 
         targetElement.remove();
-        
+
         count++;
         score.innerHTML = count;
 
