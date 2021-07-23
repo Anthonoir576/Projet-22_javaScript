@@ -8,7 +8,7 @@ const hand = document.querySelector('.blood');
 
 // le score a atteindre, et le nombre delement qui sont afficher pour perdre la partie
 zombieLeft = 60;
-gameOverNumber = 1;
+gameOverNumber = 30;
 loopPlay = false;
 
 
@@ -159,3 +159,15 @@ canvas.addEventListener('click', () => {
 
 });
 
+endScreen.addEventListener('click', () => {
+
+    setTimeout(() => {
+        
+        start();
+
+        endScreen.style.opacity = '0';
+        endScreen.style.visibility = 'hidden';
+
+    }, 3500);
+
+});
